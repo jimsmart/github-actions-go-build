@@ -47,12 +47,12 @@ jobs:
         go get -u golang.org/x/lint/golint
         go get -t -v ./...
 
-    # Build
+    # Build project
     - name: Build project
       run: go build .
       
-    # Run vet & golint on the code
-    - name: Run vet & golint
+    # Run go vet & golint
+    - name: Run go vet & golint
       run: |
         go vet .
         golint .
@@ -67,7 +67,7 @@ jobs:
       with:
         file: ./coverage.txt
         fail_ci_if_error: true # optional (default = false)
-        verbose: true # optional (default = false)
+        # verbose: true # optional (default = false)
 
     # # Send slack notification
     # - name: Send slack notification
