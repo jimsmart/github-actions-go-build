@@ -61,7 +61,7 @@ jobs:
     
     # Run testing on the code
     - name: Run testing
-        run: go test -v -race -coverprofile=coverage.txt -covermode=atomic
+      run: go test -v -race -coverprofile=coverage.txt -covermode=atomic
     #   run: go test -v
     #   run: cd test && go test -v
 
